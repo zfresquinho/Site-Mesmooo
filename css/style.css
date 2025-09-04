@@ -1,0 +1,238 @@
+     * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.97);
+            padding: 1.2rem 0;
+            box-shadow: 0 2px 16px rgba(102, 126, 234, 0.12);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            animation: fadeInDown 1s;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 16px rgba(102, 126, 234, 0.18);
+            border: 3px solid #667eea;
+            transition: transform 0.3s;
+        }
+        .logo img:hover {
+            transform: scale(1.07) rotate(-3deg);
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.25);
+        }
+
+        .logo-text {
+            font-size: 1.7rem;
+            font-weight: bold;
+            color: #2c3e50;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 8px rgba(102, 126, 234, 0.08);
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            transition: all 0.3s cubic-bezier(.4,1.7,.7,1.01);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav a:hover {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 4px 16px rgba(102, 126, 234, 0.18);
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem 2rem 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.97);
+            padding: 4rem 2rem;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.10);
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 1.2s;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 2px 12px rgba(102, 126, 234, 0.10);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        footer {
+            background: rgba(44, 62, 80, 0.98);
+            color: #fff;
+            padding: 2.5rem 0 1rem 0;
+            margin-top: 3rem;
+            box-shadow: 0 -2px 24px rgba(44, 62, 80, 0.10);
+            font-size: 1rem;
+        }
+        footer section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        footer section > div {
+            min-width: 220px;
+            max-width: 320px;
+        }
+
+        .footer-icon-text {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            margin-bottom: 0.5rem;
+        }
+        .footer-icon-text img {
+            display: block;
+            width: 32px;
+            height: 32px;
+            margin: 0;
+        }
+        .footer-icon-text span {
+            color: #fff;
+            font-size: 1rem;
+            opacity: 0.92;
+        }
+        footer p {
+            margin-bottom: 0.5rem;
+            color: #fff;
+            opacity: 0.92;
+        }
+        footer iframe {
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(102, 126, 234, 0.10);
+        }
+        footer > p {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            color: #eee;
+            opacity: 0.7;
+        }
+        @media (max-width: 900px) {
+            .main-content {
+                padding: 2rem 1rem 1rem 1rem;
+            }
+            footer section {
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+            .nav {
+                gap: 1rem;
+            }
+            .nav a {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .main-content {
+                padding: 2rem 0.5rem 1rem 0.5rem;
+            }
+            footer section {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.2rem;
+            }
+            footer iframe {
+                width: 100% !important;
+                height: 200px !important;
+            }
+        }
+
+
