@@ -1,3 +1,34 @@
+/* --- Botão serviço --- */
+.btn-img-service {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+    border-radius: 24px;
+    padding: 0.4rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.08);
+    cursor: pointer;
+    transition: border 0.3s, color 0.3s, box-shadow 0.2s, background 0.2s;
+    margin: 1.2rem auto 0 auto;
+}
+
+.btn-img-service img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 1px 4px rgba(102, 126, 234, 0.10);
+}
+.btn-img-service:hover {
+    background: rgba(102, 126, 234, 0.08);
+    color: #2c3e50;
+    border-color: #764ba2;
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.15);
+}
 /* --- Contato --- */
 .main-content-contact {
     max-width: 1100px;
@@ -300,6 +331,82 @@
     padding: 3rem 2rem;
     margin-bottom: 2rem;
     animation: fadeInUp 1.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.loja table {
+    width: 480px;
+    max-width: 95%;
+    margin: 1.5rem auto 0 auto;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(102, 126, 234, 0.10);
+    overflow: hidden;
+}
+.loja th, .loja td {
+    padding: 1rem 0.7rem;
+    text-align: left;
+    font-size: 1.08rem;
+    color: #2c3e50;
+}
+.loja th {
+    background: linear-gradient(135deg, #e9eafc 60%, #f7f8fa 100%);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e9eafc;
+}
+.loja tr {
+    border-bottom: 1px solid #e9eafc;
+}
+.loja tfoot td {
+    font-size: 1rem;
+    color: #667eea;
+    background: #f7f8fa;
+    padding-top: 1.2rem;
+    border-top: 2px solid #e9eafc;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 2px 12px rgba(102, 126, 234, 0.08);
+}
+.loja h2 {
+    font-size: 1.3rem;
+    color: #667eea;
+    margin-bottom: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 12px rgba(102, 126, 234, 0.10);
+}
+.btn-img {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.12);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin: 0 auto;
+}
+.btn-img img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.10);
+}
+.btn-img:hover {
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    transform: scale(1.05);
 }
 
 .services h1 {
@@ -323,6 +430,10 @@
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .service-item:hover {
@@ -343,6 +454,7 @@
     font-size: 1.1rem;
     color: #444;
     line-height: 1.7;
+    text-align: center;
 }
 
 @media (max-width: 900px) {
@@ -402,6 +514,7 @@ body {
     z-index: 100;
     animation: fadeInDown 1s;
 }
+
 
 @keyframes fadeInDown {
     from {
@@ -487,6 +600,15 @@ body {
     background: rgba(255, 255, 255, 0.97);
     padding: 4rem 2rem;
     border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.10);
+    backdrop-filter: blur(10px);
+    animation: fadeInUp 1.2s;
+}
+.hero-loja {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.97);
+    padding: 4rem 2rem;
+    border-radius: 0px;
     box-shadow: 0 10px 40px rgba(102, 126, 234, 0.10);
     backdrop-filter: blur(10px);
     animation: fadeInUp 1.2s;
